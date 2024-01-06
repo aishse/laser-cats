@@ -26,23 +26,23 @@ titlestate = titles.TitleScreen()
 def main():
     while not settings.state_machine["gameover"]:
         settings.score = 0
-        settings.lives = 0
+        settings.lives = 9
 
-        pygame.mixer.music.load("title_screen.wav")
-        # pygame.mixer.music.play(-1)
+        pygame.mixer.music.load("sounds/title_screen.wav")
+        pygame.mixer.music.play(-1)
         titlestate.update()
 
         pygame.mixer.music.stop()
         # print("switching to playstate")
 
-        pygame.mixer.music.load("gamesong.wav")
-        # pygame.mixer.music.play(-1)
+        pygame.mixer.music.load("sounds/gamesong.wav")
+        pygame.mixer.music.play(-1)
         playstate = play.PlayState()
         playstate.rungame()
         pygame.mixer.music.stop()
 
-        pygame.mixer.music.load("title_screen.wav")
-        # pygame.mixer.music.play(-1)
+        pygame.mixer.music.load("sounds/title_screen.wav")
+        pygame.mixer.music.play(-1)
         scorestate = score.ScoreScreen()
 
         name = input("Enter username for leaderboard: ")
