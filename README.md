@@ -5,7 +5,7 @@ Made by Anishka Chauhan for CS50 Python's final project
 
 Last updated: 1/5/2024
 
-[Demo link](https://www.google.com)
+[Demo link (in progress)]()
 ## Description:
 The object of the game is to shoot lasers at as many enemy characters as possible. You have 9 lives, and once you lose them, the game is over.
 
