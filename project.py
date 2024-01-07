@@ -13,9 +13,6 @@ background = background.convert()
 background.fill((114, 148, 210))
 
 
-mid_font = pygame.font.Font("golem-script.ttf", 48)
-msg = mid_font.render("Check the console!", 1, (10, 10, 10))
-background.blit(msg, (100, 204))
 settings.screen.blit(background, (0, 0))
 pygame.display.flip()
 
@@ -45,26 +42,47 @@ def main():
         pygame.mixer.music.play(-1)
         scorestate = score.ScoreScreen()
 
+        mid_font = pygame.font.Font("golem-script.ttf", 48)
+        msg = mid_font.render("Check the console!", 1, (10, 10, 10))
+        settings.screen.blit(msg, (100, 204))
+        pygame.display.flip()
+
         name = input("Enter username for leaderboard: ")
         write_to_leaderboard(settings.score, name, "leaderboard.txt")
         fetch_leaderboard("leaderboard.txt")
+        high_score = get_userscore(name, "leaderboard.txt")
+        print("Your high score is: " + str(high_score))
+
         input("Press any key to continue the game: ")
+        print("Go back to the game window!")
         scorestate.update()
         pygame.mixer.music.stop()
 
 
 # write to a leaderboard
 def write_to_leaderboard(score, name, file):
-    with open(file, "a") as fp:
-        fp.write(name + ": " + str(score))
-        fp.write("\n")
+    index = 0
+    with open(file, "r+") as fp:
+        contents = fp.readlines()
+        fp.seek(0)
+
+        for line in fp:
+            entry = line.split(":")
+
+            if score < int(entry[1].strip()):
+                index += 1
+                # print("line " + str(index))
+
+        contents.insert(index, name + ": " + str(score) + "\n")
+        fp.seek(0)
+        fp.writelines(contents)
 
 
 def get_userscore(name, file):
     with open(file, "r") as fp:
         for line in fp:
             entry = line.split(":")
-            print(entry)
+
             if entry[0] == name:
                 return int(entry[1].strip())
     return None

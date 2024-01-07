@@ -1,1 +1,8 @@
-anishka: 23
+AISHA: 32
+AISHA: 30
+anishka: 21
+aisha: 20
+anishka again: 15
+anishka: 15
+anishka: 10
+bad player: 0

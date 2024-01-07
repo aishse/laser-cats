@@ -57,16 +57,17 @@ Unfortunately, not all the sprites were in perfectly aligned 256px by 256px boxe
 ### Some miscellaneous easter eggs
 
 - The idea of making Laser Cats was based off the [SNL digital short](https://www.youtube.com/watch?v=e5fiBFhf9OQ), also titled Laser Cats. 
+- Pressing B when you're on the title screen plays an audio snippet from the first installment of Laser Cats
   
-- The music and sounds were all made by me using Bfxr and BeepBox
+- The music and sounds for the main game were made by me using Bfxr and BeepBox
   
 - The "red flag" enemy was added as an inside joke with friends
   
-- Number of lives is 9 because cats have 9 lives
+- The number of lives is 9 because cats have 9 lives
   
 - The game physics is loosely based off the bird50 project in CS50G
 - The cat is orange because let's be real, this game is peak orange cat behavior
   
-- Also, cat behavior exhibited in the game is realistic
+- Also, all cat behavior exhibited in the game is realistic
 </p>
 /ᐠ - ˕ -マ₊˚⊹♡₊ ⊹

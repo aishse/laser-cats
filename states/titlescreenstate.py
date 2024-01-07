@@ -27,6 +27,11 @@ class TitleScreen:
                 if event.type == pygame.KEYDOWN:
                     if event.key == K_q:
                         sys.exit()
+                    if event.key == K_b:
+                        pygame.mixer.Sound.play(settings.select_sound)
+                        pygame.mixer.music.stop()
+                        pygame.mixer.music.load("sounds/title_screen2.wav")
+                        pygame.mixer.music.play(-1)
                     if event.key == K_SPACE:
                         pygame.mixer.Sound.play(settings.select_sound)
                         settings.state_machine["in_title"] = False
