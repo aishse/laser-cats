@@ -3,9 +3,9 @@ A 2D platformer where you're a cat shooting lasers at your mortal enemies!
 
 Made by Anishka Chauhan for CS50 Python's final project 
 
-Last updated: 1/5/2024
+Last updated: 9/22/2024
 
-[Demo link (in progress)]()
+[Demo link](https://youtu.be/N2ke0iFvYYo)
 ## Description:
 The object of the game is to shoot lasers at as many enemy characters as possible. You have 9 lives, and once you lose them, the game is over.
 
